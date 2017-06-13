@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="10dp">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/busplan_image"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:layout_toEndOf="@id/busplan_image"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:textSize="17sp"
+        android:id="@+id/bus_pathname"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:textSize="13sp"
+        android:layout_below="@id/bus_pathname"
+        android:layout_alignStart="@id/bus_pathname"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="3dp"
+        android:id="@+id/bus_cost"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:textSize="13sp"
+        android:layout_toEndOf="@id/bus_cost"
+        android:layout_alignBottom="@id/bus_cost"
+        android:layout_marginStart="40dp"
+        android:id="@+id/bus_duration"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:textSize="13sp"
+        android:layout_alignBottom="@id/bus_duration"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/bus_walkdistance"/>
+
+</RelativeLayout>

@@ -1,0 +1,319 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menuback"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <!-- fill weight越小越大  -->
+    
+    <!-- 左边的大块 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+	
+	<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/text_day"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/weather_degree_mins" 
+                android:contentDescription="@string/desc"/>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/weather_degree0" 
+                android:contentDescription="@string/desc"/>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/weather_degree0" 
+                android:contentDescription="@string/desc"/>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/weather_degree_img" 
+                android:contentDescription="@string/desc"/>
+
+            <TextView
+                android:id="@+id/shishi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shishi"
+                android:visibility="invisible" />
+
+	</LinearLayout>
+	
+		<EditText
+		    android:id="@+id/EditText"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_above="@+id/btn_Query"
+		    android:layout_alignParentLeft="true"
+		    android:hint="@string/EditText"
+		    android:maxLength="10"
+		    android:singleLine="true"
+		    android:textColor="@color/black_overlay" />
+        
+        <Button
+            android:id="@+id/btn_Query"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="@string/btn_Query" />
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text=""
+            android:background="#af808080"/>
+
+        <TextView
+            android:id="@+id/text_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:text="@string/text_day"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+    <!-- 右边的大块 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="#0fffffff"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/tianqi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/weather_alltext_0"
+                android:contentDescription="@string/desc"/>
+
+            <TextView
+                android:id="@+id/wind"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="@string/wind" />
+
+            <TextView
+                android:id="@+id/city"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="105dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="@string/city" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+			<ImageView
+                android:id="@+id/imgtq1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/weather_small1"
+                android:contentDescription="@string/desc"/>
+
+			<TextView
+                android:id="@+id/textrq1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imgtq1"
+                android:layout_alignParentLeft="true"
+                android:text="@string/textrq1"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5sp"/>
+
+            <TextView
+                android:id="@+id/texttq1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/imgtq1"
+                android:text="@string/texttq1"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_marginLeft="5sp"/>
+
+            <ImageView
+                android:id="@+id/imgtq2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/texttq1"
+                android:background="@drawable/weather_small1"
+                android:contentDescription="@string/desc"/>
+
+            <TextView
+                android:id="@+id/textrq2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imgtq2"
+                android:layout_toLeftOf="@+id/imgtq2"
+                android:text="@string/textrq2"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5sp"/>
+
+			<ImageView
+                android:id="@+id/imgtq3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/texttq2"
+                android:background="@drawable/weather_small1"
+                android:contentDescription="@string/desc"/>
+
+            <TextView
+                android:id="@+id/textrq3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imgtq3"
+                android:layout_toLeftOf="@+id/imgtq3"
+                android:text="@string/textrq3"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5sp"/>
+
+			<ImageView
+                android:id="@+id/imgtq4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/texttq3"
+                android:background="@drawable/weather_small1"
+                android:contentDescription="@string/desc"/>
+
+            <TextView
+                android:id="@+id/textrq4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imgtq4"
+                android:layout_alignParentLeft="true"
+                android:text="@string/textrq4"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5sp"/>
+
+            <TextView
+                android:id="@+id/texttq2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textrq2"
+                android:text="@string/texttq2"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_marginLeft="5sp"/>
+
+            <TextView
+                android:id="@+id/texttq3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textrq3"
+                android:text="@string/texttq3"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_marginLeft="5sp"/>
+
+            <TextView
+                android:id="@+id/texttq4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textrq4"
+                android:text="@string/texttq4"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_marginLeft="5sp"/>
+
+            <TextView
+                android:id="@+id/textqw3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imgtq3"
+                android:text="@string/textqw3"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_marginRight="5sp"/>
+
+            <TextView
+                android:id="@+id/textqw2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/imgtq3"
+                android:layout_alignParentRight="true"
+                android:text="@string/textqw2"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_marginRight="5sp"/>
+
+            <TextView
+                android:id="@+id/textqw1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/imgtq2"
+                android:layout_alignParentRight="true"
+                android:text="@string/textqw1"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_marginRight="5sp"/>
+
+            <TextView
+                android:id="@+id/textqw4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/texttq4"
+                android:layout_alignBottom="@+id/texttq4"
+                android:layout_alignLeft="@+id/textqw3"
+                android:text="@string/textqw4"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

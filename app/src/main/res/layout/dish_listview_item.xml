@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dish_list_name"
+        android:layout_marginTop="10dp"
+        android:textSize="17sp"
+        android:textColor="@color/text"
+        android:text="饭店名"
+        android:layout_marginStart="30dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="83dp"
+            android:layout_height="17dp"
+            android:id="@+id/dish_mark"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dish_label"
+            android:layout_alignBottom="@+id/dish_mark"
+            android:textSize="14sp"
+            android:textColor="@color/text"
+            android:text="标签"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:id="@+id/dish_level"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/text"
+            android:layout_marginStart="55dp"
+            android:text="人均：¥"
+            android:id="@+id/avg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/avg"
+            android:layout_marginStart="5dp"
+            android:layout_alignBottom="@+id/avg"
+            android:textColor="@color/text"
+            android:id="@+id/dish_price"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/dish_district"
+            android:text="街道"
+            android:textColor="@color/gray"
+            android:layout_marginRight="20dp" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
